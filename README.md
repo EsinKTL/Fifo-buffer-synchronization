@@ -45,5 +45,17 @@ Standard semaphores (counting semaphores) are insufficient for state-dependent c
 
 1. **Prerequisites:** Ensure you are in a Linux environment (or WSL/Ubuntu) with `g++` and `make` installed.
 2. **Build:**
-   ```bash
    make
+3. **Execute:** ./fifo_task
+4.**Exit:** Press Ctrl + C to stop the simulation.
+
+## Verification
+In the provided logs, you can verify:
+
+**Turn Management:** Production strictly follows the AAA -> BB -> AAA sequence.
+
+**Threshold Logic:** Consumers do not read until the buffer count reaches 4.
+
+**Deadlock Freedom:** The system runs indefinitely without freezing, proving the correctness of the synchronization logic.
+
+***Developed as a laboratory assignment for the Operating Systems / Concurrent Programming course at Warsaw University of Technology (WUT).***
